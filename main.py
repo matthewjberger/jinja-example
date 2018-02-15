@@ -10,7 +10,7 @@ env = Environment(
 
 @app.route('/')
 def display_shows():
-    shows = ['House MD', 'Bojack Horseman']
+    showList = ['House MD', 'Bojack Horseman']
     return env.get_template('index.html').render(
-        shows=map(json.dumps, shows)
+        shows=showList
     )
